@@ -2,11 +2,10 @@ import { getDiscountedPricePercentage } from "../src/utils/helper";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
-const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
+// const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
 const ProductCard = ({ data: { attributes: p, id,url } }) => {
 
-const imgurl = `${strapiUrl}${p.thumbnail.data[0].attributes.url}`
+ const imgurl = `${p.thumbnail.data[0].attributes.url}`
     return (
         <Link
             href={`/product/${p.slug}`}
